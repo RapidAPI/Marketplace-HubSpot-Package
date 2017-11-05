@@ -50,14 +50,13 @@ module.exports.parse = (req , params) =>{
 }
 
 module.exports.validateRequest = (req , params) =>{
-    let missingFields = [];
-    Object.keys(params).forEach(param =>{
-        if((param.required == true )&(!req.body.args[param.name])){
-            missingFields.push(param.name);
-        }
-    });
+    const missingFields = 
+        params
+            .filter(param => param.required == true &&!req.body.args[param.name])
+            .map(param => param.name)
+
     if(missingFields.length != 0){
-        throw new RapidError(REQUIRED_FIELDS , missingFields);
+        throw new RapidError("REQUIRED_FIELDS" , missingFields);
     }
 }
 

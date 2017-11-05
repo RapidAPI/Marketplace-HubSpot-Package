@@ -32,7 +32,7 @@ app.use(bodyParser.urlencoded({limit: '50mb', extended:true}));
 //A metadata endpoint at GET /api/PACKAGE_NAME should return package metadata
 //TODO: remove backslashes
 app.get(`/api/${PACKAGE_NAME}`, (req , res) => {
-    res.status(200).send(metadata)
+    res.status(200).send(metadata);
 });
 
 //For each block, a POST /api/PACKAGE_NAME/BLOCK_NAME should execute the block
@@ -52,13 +52,13 @@ console.log(e);
 
 function passParams(req, res , paramsObj , template){
     //TODO: add validation (error handeling)
-    const parsedObj = ParamParser.parse(req , JSON.parse(paramsObj.params));
+    const parsedObj = ParamParser.parse(req , paramsObj.params);
     const parametizedUrl = ParamParser.BuildUrl(paramsObj.referenceUrl , config.baseUrl , parsedObj.concatUrl);
     try{
-        
+        ParamParser.validateRequest(req ,paramsObj.params);
     }
     catch(e){
-
+        return res.status(500).send(e);
     }
     return template(req,res, parametizedUrl ,parsedObj.urlParams , parsedObj.header , parsedObj.body);
 }

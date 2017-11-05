@@ -2,7 +2,7 @@
 
 # Hubspot Package
 connect to hubspot apis to interact with your hubspot account and perform a variety of different actions.
-* Domain: [Hubspot](http://https://github.com/RapidAPI/Marketplace-HubSpot-Package)
+* Domain: [Hubspot](http://https://www.hubspot.com/)
 * Credentials: 
 
 ## How to get credentials: 

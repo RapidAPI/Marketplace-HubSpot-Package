@@ -1,1 +1,964 @@
-{"package":"Hubspot","tagline":"","description":"connect to hubspot apis to interact with your hubspot account and perform a variety of different actions.","repo":"githubrepo","keywords":[""],"accounts":{"domain":"https://github.com/RapidAPI/Marketplace-HubSpot-Package","credentials":[]},"blocks":[{"name":"getContentEvents","args":[{"name":"startDate","type":"string","info":"The beginning value of the query range, in UTC, in milliseconds","required":true},{"name":"endDate","type":"string","info":"The end value of the query range, in UTC, in milliseconds","required":true},{"name":"hapikey","type":"string","info":"API key if Authorization header isn't present","required":false},{"name":"limit","type":"string","info":"The maximum number of items to return. Defaults to 100.","required":false},{"name":"offset","type":"string","info":"Starting value to page by. Defaults to 0.","required":false},{"name":"contentCategory","type":"string","info":"The category of content to filter by, values include \"blog-post\", \"email\"","required":false},{"name":"campaignGuid","type":"string","info":"Show tasks by campaign guid. Multiple can be specified.","includeNoCampaigns":"Show tasks without a campaign specified (true, false). Defaults to false.","required":false},{"name":"accessToken","type":"credentials","info":"if hapikey isn't present","required":false}],"callbacks":[{"name":"success","info":"Success"},{"name":"error","info":"Error"}],"description":"Get events from the calendar. The endpoint supports filtering to get the specific events you want."},{"name":"getSocialEvents","args":[{"name":"startDate","type":"string","info":"The beginning value of the query range, in UTC, in milliseconds","required":true},{"name":"endDate","type":"string","info":"The end value of the query range, in UTC, in milliseconds","required":true},{"name":"hapikey","type":"string","info":"API key if Authorization header isn't present","required":false},{"name":"limit","type":"string","info":"The maximum number of items to return. Defaults to 100.","required":false},{"name":"offset","type":"string","info":"Starting value to page by. Defaults to 0.","required":false},{"name":"contentCategory","type":"string","info":"The category of content to filter by, values include \"blog-post\", \"email\"","required":false},{"name":"campaignGuid","type":"string","info":"Show tasks by campaign guid. Multiple can be specified.","includeNoCampaigns":"Show tasks without a campaign specified (true, false). Defaults to false.","required":false},{"name":"accessToken","type":"credentials","info":"if hapikey isn't present","required":false}],"callbacks":[{"name":"success","info":"Success"},{"name":"error","info":"Error"}],"description":"Get events from the calendar. The endpoint supports filtering to get the specific events you want."},{"name":"getCalendarTaskEvents","args":[{"name":"startDate","type":"string","info":"The beginning value of the query range, in UTC, in milliseconds","required":true},{"name":"endDate","type":"string","info":"The end value of the query range, in UTC, in milliseconds","required":true},{"name":"hapikey","type":"string","info":"API key if Authorization header isn't present","required":false},{"name":"limit","type":"string","info":"The maximum number of items to return. Defaults to 100.","required":false},{"name":"offset","type":"string","info":"Starting value to page by. Defaults to 0.","required":false},{"name":"contentCategory","type":"string","info":"The category of content to filter by, values include \"blog-post\", \"email\"","required":false},{"name":"campaignGuid","type":"string","info":"Show tasks by campaign guid. Multiple can be specified.","includeNoCampaigns":"Show tasks without a campaign specified (true, false). Defaults to false.","required":false},{"name":"accessToken","type":"credentials","info":"if hapikey isn't present","required":false}],"callbacks":[{"name":"success","info":"Success"},{"name":"error","info":"Error"}],"description":"Get events from the calendar. The endpoint supports filtering to get the specific events you want."},{"name":"getAllCalendarEvents","args":[{"name":"startDate","type":"string","info":"The beginning value of the query range, in UTC, in milliseconds","required":true},{"name":"endDate","type":"string","info":"The end value of the query range, in UTC, in milliseconds","required":true},{"name":"hapikey","type":"string","info":"API key if Authorization header isn't present","required":false},{"name":"limit","type":"string","info":"The maximum number of items to return. Defaults to 100.","required":false},{"name":"offset","type":"string","info":"Starting value to page by. Defaults to 0.","required":false},{"name":"contentCategory","type":"string","info":"The category of content to filter by, values include \"blog-post\", \"email\"","required":false},{"name":"campaignGuid","type":"string","info":"Show tasks by campaign guid. Multiple can be specified.","includeNoCampaigns":"Show tasks without a campaign specified (true, false). Defaults to false.","required":false},{"name":"accessToken","type":"credentials","info":"if hapikey isn't present","required":false}],"callbacks":[{"name":"success","info":"Success"},{"name":"error","info":"Error"}],"description":"Get events from the calendar. The endpoint supports filtering to get the specific events you want."},{"name":"createTask","args":[{"name":"hapikey","info":"API key if Authorization header is not present","type":"credentials","required":false},{"name":"accessToken","type":"credentials","info":"if hapikey isn't present","required":false},{"name":"eventDate","info":"When the task is set to be due, in milliseconds since the epoch","type":"string","required":true},{"name":"eventType","info":"Type of calendar event; for tasks this is always PUBLISHING_TASK","type":"string","required":true},{"name":"category","info":"type of task; one of BLOG_POST, EMAIL, LANDING_PAGE, CUSTOM","type":"string","required":false},{"name":"state","info":"value of TODO or DONE","type":"string","required":false},{"name":"campaignGuid","info":"value of campaign GUID associated with Task","type":"string","required":false},{"name":"name","info":"Name of Task","type":"string","required":false},{"name":"description","info":"description of Task","type":"string","required":false},{"name":"ownerId","info":"HubSpot id of the user that the task is assigned to. See the Owners API to get a list of owner Ids","type":"string","required":false},{"name":"topicIds","info":"Array: The list of ids of topics associated with the associated Blog Post, if any. Otherwise null. Only read for BLOG_POST Tasks. See Topics API to get a list of topic ids.","type":"string","required":false},{"name":"contentGroupId","info":"The ID of the content group (aka blog) that the associated Blog Post will belong to, if any. Only read for BLOG_POST Tasks. See Blog API to get a list of blogs ids.","type":"string","required":false},{"name":"templatePath","info":"(optional) The template to use for emails and landing pages. only read for EMAIL and LANDING_PAGE categories.","type":"string","required":false}],"callbacks":[{"name":"success","info":"Success"},{"name":"error","info":"Error"}],"description":"Create a new Task. Creating a task of type BLOG_POST, EMAIL, or LANDING_PAGE will create a draft of the respective content and associate it with the Task, returning a contentId in the response."},{"name":"getCalendarTaskByID","args":[{"name":"taskId","type":"string","info":"The ID of the required task","required":true,"concatUrl":true},{"name":"hapikey","type":"string","info":"API key if Authorization header isn't present","required":false},{"name":"accessToken","type":"credentials","info":"if hapikey isn't present","required":false}],"callbacks":[{"name":"success","info":"Success"},{"name":"error","info":"Error"}],"description":"Get a specific calendar task by ID.\r\nThis endpoint returns a a task by specifying the ID of that task"},{"name":"updateCalendarTask","args":[{"name":"hapikey","type":"string","info":"API key if Authorization header isn't present","required":false},{"name":"taskId","type":"string","info":"Unique identifier for the task to delete","required":true,"concatUrl":true},{"name":"accessToken","type":"credentials","info":"if hapikey isn't present","required":false},{"name":"eventDate","type":"string","info":"When the task is set to be due, in milliseconds since the epoch","required":false},{"name":"eventType","type":"string","info":"Type of calendar event; for tasks this is always PUBLISHING_TASK","required":false},{"name":"category","type":"string","info":"type of task; one of BLOG_POST, EMAIL, LANDING_PAGE, CUSTOM. This must match existing value.","required":false},{"name":"state","type":"string","info":"value of TODO or DONE","required":false},{"name":"category","type":"string","info":"type of task; one of BLOG_POST, EMAIL, LANDING_PAGE, CUSTOM. This must match existing value.","required":false},{"name":"campaignGuid","type":"string","info":"value of campaign GUID associated with Task","required":false},{"name":"topicIds","type":"string","info":"The list of ids of topics associated with the associated Blog Post, if any. Otherwise null. Only read for BLOG_POST Tasks. See Topics API to get a list of topic ids.","required":false},{"name":"name","type":"string","info":"Name of Task","required":false},{"name":"description","type":"string","info":"description of Task.","required":false},{"name":"ownerId","type":"string","info":"HubSpot id of the user that the task is assigned to. See the Owners API to get a list of owner Ids.","required":false}],"callbacks":[{"name":"success","info":"Success"},{"name":"error","info":"Error"}],"description":"Update a Task. this action will replace any existing allowed fields specified. Any fields not included will not change from existing values.\r\n"},{"name":"deleteCalendarTask","args":[{"name":"hapikey","type":"string","info":"API key if Authorization header isn't present","required":false},{"name":"taskId","type":"string","info":"Unique identifier for the task to delete","required":true,"concatUrl":true},{"name":"accessToken","type":"credentials","info":"if hapikey isn't present","required":false}],"callbacks":[{"name":"success","info":"Success"},{"name":"error","info":"Error"}],"description":"Deletes Task from system. If there is a content object (Blog post, email, landing page) associated, they will not be affected."},{"name":"createACompany","args":[{"name":"hapikey","type":"string","info":"API key if Authorization header isn't present","required":false},{"name":"accessToken","type":"credentials","info":"if hapikey isn't present","required":false},{"name":"companyJSON","type":"string","info":"This is JSON that represents a company that you're creating. This should be in the format of the code sample below.","required":true}],"callbacks":[{"name":"success","info":"Success"},{"name":"error","info":"Error"}],"description":"For a given portal, create a company. This is particularly useful if you're integrating with a CRM or another application that has a similar notion of a company."},{"name":"updateACompany","args":[{"name":"hapikey","type":"string","info":"API key if Authorization header isn't present","required":false},{"name":"companyId","type":"string","info":"Unique identifier for a particular company.","required":true,"concatUrl":true},{"name":"accessToken","type":"credentials","info":"if hapikey isn't present","required":false},{"name":"companyJSON","type":"string","info":"This is JSON that represents a company that you're creating. This should be in the format of the code sample below.","required":true}],"callbacks":[{"name":"success","info":"Success"},{"name":"error","info":"Error"}],"description":"Updates the existing company with the id :companyId with the properties as specified by JSON in the request body\r\n\r\nReturns JSON representing the updated company."},{"name":"updateAGroupOfCompanies","args":[{"name":"hapikey","type":"string","info":"API key if Authorization header isn't present","required":false},{"name":"accessToken","type":"credentials","info":"if hapikey isn't present","required":false},{"name":"objectId","type":"string","info":"The companyId of the company that you want to update.","required":true},{"name":"properties","type":"string","info":"A list of properties that you want to update. Each property must include the name of the property to be updated, and the value of the property to update to..","required":true}],"callbacks":[{"name":"success","info":"Success"},{"name":"error","info":"Error"}],"description":"Update a group of existing company records by their companyId.\r\nThis endpoint takes a list of objectIds and that correspond to the companyId of the company you want to update, and a list of properties to update for that company."},{"name":"deleteACompany","args":[{"name":"companyId","type":"string","info":"Unique identifier for a particular company.","required":true,"concatUrl":true},{"name":"hapikey","type":"string","info":"API key if Authorization header isn't present","required":false},{"name":"accessToken","type":"credentials","info":"if hapikey isn't present","required":false}],"callbacks":[{"name":"success","info":"Success"},{"name":"error","info":"Error"}],"description":"Deletes the exisiting company specified by :companyId. Returns JSON indicating whether or not the specified company was actually deleted.\r\n\r\nSince companies play a central role in the CRM, it is a best practice not to delete a company unless your application has created them."},{"name":"getAllCompanies","args":[{"name":"hapikey","type":"string","info":"API key if Authorization header isn't present","required":false},{"name":"Limit","type":"string","info":"The number of records to return. Defaults to 100, has a maximum value of 250.","required":false},{"name":"Offset","type":"string","info":"Used to page through the results. If there are more records in your portal than the limit= parameter, you will need to use the offset returned in the first request to get the next set of results.","required":false},{"name":"Properties","type":"string","info":"Used to include specific company properties in the results.  By default, the results will only include the company ID, and will not include the values for any properties for your companies.  Including this parameter will include the data for the specified property in the results.  You can include this parameter multiple times to request multiple properties. Note:to pass multiple Properties pass  a comma separated list of arguments.","required":false,"multiple":"true"},{"name":"PropertiesWithHistory","type":"string","info":"Works similarly to properties=, but this parameter will include the history for the specified property, instead of just including the current value. Use this parameter when you need the full history of changes to a property's value.","required":false,"multiple":true},{"name":"accessToken","type":"credentials","info":"if hapikey isn't present","required":false}],"callbacks":[{"name":"success","info":"Success"},{"name":"error","info":"Error"}],"description":"Used to get all of the companies in a portal. Returns a paginated list of companies.\r\n\r\nIn addition to the list of companies, each request will also return two values, offset and has-more. If has-more is true, you'll need to make another request, using the offset to get the next page of company records."},{"name":"getRecentlyModifiedCompanies","args":[{"name":"hapikey","type":"string","info":"API key if Authorization header isn't present","required":false},{"name":"offset","type":"string","info":"This is used to get the next page of results. Each request will return an offset in the response, and you'd use that offset in the URL of your next request to get the next page of results.","required":false},{"name":"Count","type":"string","info":"Specifies the number of companies to be returned.","required":false},{"name":"accessToken","type":"credentials","info":"if hapikey isn't present","required":false}],"callbacks":[{"name":"success","info":"Success"},{"name":"error","info":"Error"}],"description":"Returns a list of all companies sorted by the date the companies were most recently modified. This is particularly useful for ongoing syncs with HubSpot in which changes to companies must be captured in another system."},{"name":"getRecentlyCreatedCompanies","args":[{"name":"hapikey","type":"string","info":"API key if Authorization header isn't present","required":false},{"name":"offset","type":"string","info":"This is used to get the next page of results. Each request will return an offset in the response, and you'd use that offset in the URL of your next request to get the next page of results.","required":false},{"name":"Count","type":"string","info":"Specifies the number of companies to be returned.","required":false},{"name":"accessToken","type":"credentials","info":"if hapikey isn't present","required":false}],"callbacks":[{"name":"success","info":"Success"},{"name":"error","info":"Error"}],"description":"Returns a list of all companies sorted by the date the companies were created. This is particularly useful for ongoing syncs with HubSpot in which changes to companies must be captured in another system."},{"name":"getACompany","args":[{"name":"companyId","type":"string","info":"Unique identifier for a particular company.","required":true,"concatUrl":true},{"name":"hapikey","type":"string","info":"API key if Authorization header isn't present","required":false},{"name":"accessToken","type":"credentials","info":"if hapikey isn't present","required":false}],"callbacks":[{"name":"success","info":"Success"},{"name":"error","info":"Error"}],"description":"Returns an object representing the company with the id :companyId associated with the specified portal. Particularly useful if you're performing lookups on specific attributes of a company."},{"name":"getContactsAtACompany","args":[{"name":"companyId","type":"string","info":"Unique identifier for a particular company.","required":true,"concatUrl":true},{"name":"hapikey","type":"string","info":"API key if Authorization header isn't present","required":false},{"name":"Count","type":"string","info":"Specifies the number of contacts to be returned.","required":false},{"name":"VidOffset","type":"string","info":"The vid to offset the query by.","required":false},{"name":"accessToken","type":"credentials","info":"if hapikey isn't present","required":false}],"callbacks":[{"name":"success","info":"Success"},{"name":"error","info":"Error"}],"description":"Returns all of the contacts who have an associatedcompanyid contact property of :companyid. For more on how contacts are associated with companies, check out our Companies API Overview.\r\n\r\nThis will return 20 contacts by default. You can get up to 100 contacts per request using the count= parameter. You can use the \"vidoffset\": field returned in the results with the vidOffset= parameter to get the next set of results."},{"name":"getContactIDsAtACompany","args":[{"name":"companyId","type":"string","info":"Unique identifier for a particular company.","required":true,"concatUrl":true},{"name":"hapikey","type":"string","info":"API key if Authorization header isn't present","required":false},{"name":"Count","type":"string","info":"Specifies the number of contacts to be returned.","required":false},{"name":"VidOffset","type":"string","info":"The vid to offset the query by.","required":false},{"name":"accessToken","type":"credentials","info":"if hapikey isn't present","required":false}],"callbacks":[{"name":"success","info":"Success"},{"name":"error","info":"Error"}],"description":"Returns all of the contact IDs who have an associatedcompanyid property of :companyid. Useful if you're not looking for any more information on contacts at a company other than that they exist and where to find more information on them.\r\n\r\nThis will return 100 contacts by default, which is the maximum number of records you can get in a single request. You can get fewer contacts per request using the count= parameter. You can use the \"vidoffset\": field returned in the results with the vidOffset= parameter to get the next set of results."},{"name":"addContactToCompany","args":[{"name":"contactVID","type":"string","info":"The ID of a contact to add a company.","required":true,"concatUrl":true},{"name":"companyID","type":"string","info":"The ID of a company to add a contact to.","required":true,"concatUrl":true},{"name":"hapikey","type":"string","info":"API key if Authorization header isn't present","required":false},{"name":"accessToken","type":"credentials","info":"if hapikey isn't present","required":false}],"callbacks":[{"name":"success","info":"Success"},{"name":"error","info":"Error"}],"description":"Associate a given contact to a company. If a contact is already associated to a different company, the contact will be moved to the new company. A contact can only be associated to one company.\r\n\r\n"},{"name":"removeContactFromCompany","args":[{"name":"contactVID","type":"string","info":"The ID of a contact to add a company.","required":true,"concatUrl":true},{"name":"companyID","type":"string","info":"The ID of a company to add a contact to.","required":true,"concatUrl":true},{"name":"hapikey","type":"string","info":"API key if Authorization header isn't present","required":false},{"name":"accessToken","type":"credentials","info":"if hapikey isn't present","required":false}],"callbacks":[{"name":"success","info":"Success"},{"name":"error","info":"Error"}],"description":"Remove a contact from a company. Once complete the contact will not be associated to any company."}]}
+{
+  "package": "Hubspot",
+  "tagline": "interact with hubspot",
+  "description":
+    "connect to hubspot apis to interact with your hubspot account and perform a variety of different actions.",
+    "image" : "https://logo.clearbit.com/hubspot.com",
+  "repo": "https://github.com/RapidAPI/Marketplace-HubSpot-Package",
+  "keywords": ["SaaS", "support", "cloud","API"],
+  "accounts": {
+    "domain": "https://www.hubspot.com/",
+    "credentials": []
+  },
+  "blocks": [
+    {
+      "name": "getContentEvents",
+      "args": [
+        {
+          "name": "startDate",
+          "type": "string",
+          "info":
+            "The beginning value of the query range, in UTC, in milliseconds",
+          "required": true
+        },
+        {
+          "name": "endDate",
+          "type": "string",
+          "info": "The end value of the query range, in UTC, in milliseconds",
+          "required": true
+        },
+        {
+          "name": "hapikey",
+          "type": "string",
+          "info": "API key if Authorization header isn't present",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "string",
+          "info": "The maximum number of items to return. Defaults to 100.",
+          "required": false
+        },
+        {
+          "name": "offset",
+          "type": "string",
+          "info": "Starting value to page by. Defaults to 0.",
+          "required": false
+        },
+        {
+          "name": "contentCategory",
+          "type": "string",
+          "info":
+            "The category of content to filter by, values include \"blog-post\", \"email\"",
+          "required": false
+        },
+        {
+          "name": "campaignGuid",
+          "type": "string",
+          "info": "Show tasks by campaign guid. Multiple can be specified.",
+          "includeNoCampaigns":
+            "Show tasks without a campaign specified (true, false). Defaults to false.",
+          "required": false
+        },
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "if hapikey isn't present",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        { "name": "success", "info": "Success" },
+        { "name": "error", "info": "Error" }
+      ],
+      "description":
+        "Get events from the calendar. The endpoint supports filtering to get the specific events you want."
+    },
+    {
+      "name": "getSocialEvents",
+      "args": [
+        {
+          "name": "startDate",
+          "type": "string",
+          "info":
+            "The beginning value of the query range, in UTC, in milliseconds",
+          "required": true
+        },
+        {
+          "name": "endDate",
+          "type": "string",
+          "info": "The end value of the query range, in UTC, in milliseconds",
+          "required": true
+        },
+        {
+          "name": "hapikey",
+          "type": "string",
+          "info": "API key if Authorization header isn't present",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "string",
+          "info": "The maximum number of items to return. Defaults to 100.",
+          "required": false
+        },
+        {
+          "name": "offset",
+          "type": "string",
+          "info": "Starting value to page by. Defaults to 0.",
+          "required": false
+        },
+        {
+          "name": "contentCategory",
+          "type": "string",
+          "info":
+            "The category of content to filter by, values include \"blog-post\", \"email\"",
+          "required": false
+        },
+        {
+          "name": "campaignGuid",
+          "type": "string",
+          "info": "Show tasks by campaign guid. Multiple can be specified.",
+          "includeNoCampaigns":
+            "Show tasks without a campaign specified (true, false). Defaults to false.",
+          "required": false
+        },
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "if hapikey isn't present",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        { "name": "success", "info": "Success" },
+        { "name": "error", "info": "Error" }
+      ],
+      "description":
+        "Get events from the calendar. The endpoint supports filtering to get the specific events you want."
+    },
+    {
+      "name": "getCalendarTaskEvents",
+      "args": [
+        {
+          "name": "startDate",
+          "type": "string",
+          "info":
+            "The beginning value of the query range, in UTC, in milliseconds",
+          "required": true
+        },
+        {
+          "name": "endDate",
+          "type": "string",
+          "info": "The end value of the query range, in UTC, in milliseconds",
+          "required": true
+        },
+        {
+          "name": "hapikey",
+          "type": "string",
+          "info": "API key if Authorization header isn't present",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "string",
+          "info": "The maximum number of items to return. Defaults to 100.",
+          "required": false
+        },
+        {
+          "name": "offset",
+          "type": "string",
+          "info": "Starting value to page by. Defaults to 0.",
+          "required": false
+        },
+        {
+          "name": "contentCategory",
+          "type": "string",
+          "info":
+            "The category of content to filter by, values include \"blog-post\", \"email\"",
+          "required": false
+        },
+        {
+          "name": "campaignGuid",
+          "type": "string",
+          "info": "Show tasks by campaign guid. Multiple can be specified.",
+          "includeNoCampaigns":
+            "Show tasks without a campaign specified (true, false). Defaults to false.",
+          "required": false
+        },
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "if hapikey isn't present",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        { "name": "success", "info": "Success" },
+        { "name": "error", "info": "Error" }
+      ],
+      "description":
+        "Get events from the calendar. The endpoint supports filtering to get the specific events you want."
+    },
+    {
+      "name": "getAllCalendarEvents",
+      "args": [
+        {
+          "name": "startDate",
+          "type": "string",
+          "info":
+            "The beginning value of the query range, in UTC, in milliseconds",
+          "required": true
+        },
+        {
+          "name": "endDate",
+          "type": "string",
+          "info": "The end value of the query range, in UTC, in milliseconds",
+          "required": true
+        },
+        {
+          "name": "hapikey",
+          "type": "string",
+          "info": "API key if Authorization header isn't present",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "string",
+          "info": "The maximum number of items to return. Defaults to 100.",
+          "required": false
+        },
+        {
+          "name": "offset",
+          "type": "string",
+          "info": "Starting value to page by. Defaults to 0.",
+          "required": false
+        },
+        {
+          "name": "contentCategory",
+          "type": "string",
+          "info":
+            "The category of content to filter by, values include \"blog-post\", \"email\"",
+          "required": false
+        },
+        {
+          "name": "campaignGuid",
+          "type": "string",
+          "info": "Show tasks by campaign guid. Multiple can be specified.",
+          "includeNoCampaigns":
+            "Show tasks without a campaign specified (true, false). Defaults to false.",
+          "required": false
+        },
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "if hapikey isn't present",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        { "name": "success", "info": "Success" },
+        { "name": "error", "info": "Error" }
+      ],
+      "description":
+        "Get events from the calendar. The endpoint supports filtering to get the specific events you want."
+    },
+    {
+      "name": "createTask",
+      "args": [
+        {
+          "name": "hapikey",
+          "info": "API key if Authorization header is not present",
+          "type": "credentials",
+          "required": false
+        },
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "if hapikey isn't present",
+          "required": false
+        },
+        {
+          "name": "eventDate",
+          "info":
+            "When the task is set to be due, in milliseconds since the epoch",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "eventType",
+          "info":
+            "Type of calendar event; for tasks this is always PUBLISHING_TASK",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "category",
+          "info": "type of task; one of BLOG_POST, EMAIL, LANDING_PAGE, CUSTOM",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "state",
+          "info": "value of TODO or DONE",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "campaignGuid",
+          "info": "value of campaign GUID associated with Task",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "name",
+          "info": "Name of Task",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "description",
+          "info": "description of Task",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "ownerId",
+          "info":
+            "HubSpot id of the user that the task is assigned to. See the Owners API to get a list of owner Ids",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "topicIds",
+          "info":
+            "Array: The list of ids of topics associated with the associated Blog Post, if any. Otherwise null. Only read for BLOG_POST Tasks. See Topics API to get a list of topic ids.",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "contentGroupId",
+          "info":
+            "The ID of the content group (aka blog) that the associated Blog Post will belong to, if any. Only read for BLOG_POST Tasks. See Blog API to get a list of blogs ids.",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "templatePath",
+          "info":
+            "(optional) The template to use for emails and landing pages. only read for EMAIL and LANDING_PAGE categories.",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        { "name": "success", "info": "Success" },
+        { "name": "error", "info": "Error" }
+      ],
+      "description":
+        "Create a new Task. Creating a task of type BLOG_POST, EMAIL, or LANDING_PAGE will create a draft of the respective content and associate it with the Task, returning a contentId in the response."
+    },
+    {
+      "name": "getCalendarTaskByID",
+      "args": [
+        {
+          "name": "taskId",
+          "type": "string",
+          "info": "The ID of the required task",
+          "required": true,
+          "concatUrl": true
+        },
+        {
+          "name": "hapikey",
+          "type": "string",
+          "info": "API key if Authorization header isn't present",
+          "required": false
+        },
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "if hapikey isn't present",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        { "name": "success", "info": "Success" },
+        { "name": "error", "info": "Error" }
+      ],
+      "description":
+        "Get a specific calendar task by ID.\r\nThis endpoint returns a a task by specifying the ID of that task"
+    },
+    {
+      "name": "updateCalendarTask",
+      "args": [
+        {
+          "name": "hapikey",
+          "type": "string",
+          "info": "API key if Authorization header isn't present",
+          "required": false
+        },
+        {
+          "name": "taskId",
+          "type": "string",
+          "info": "Unique identifier for the task to delete",
+          "required": true,
+          "concatUrl": true
+        },
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "if hapikey isn't present",
+          "required": false
+        },
+        {
+          "name": "eventDate",
+          "type": "string",
+          "info":
+            "When the task is set to be due, in milliseconds since the epoch",
+          "required": false
+        },
+        {
+          "name": "eventType",
+          "type": "string",
+          "info":
+            "Type of calendar event; for tasks this is always PUBLISHING_TASK",
+          "required": false
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "info":
+            "type of task; one of BLOG_POST, EMAIL, LANDING_PAGE, CUSTOM. This must match existing value.",
+          "required": false
+        },
+        {
+          "name": "state",
+          "type": "string",
+          "info": "value of TODO or DONE",
+          "required": false
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "info":
+            "type of task; one of BLOG_POST, EMAIL, LANDING_PAGE, CUSTOM. This must match existing value.",
+          "required": false
+        },
+        {
+          "name": "campaignGuid",
+          "type": "string",
+          "info": "value of campaign GUID associated with Task",
+          "required": false
+        },
+        {
+          "name": "topicIds",
+          "type": "string",
+          "info":
+            "The list of ids of topics associated with the associated Blog Post, if any. Otherwise null. Only read for BLOG_POST Tasks. See Topics API to get a list of topic ids.",
+          "required": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "info": "Name of Task",
+          "required": false
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "info": "description of Task.",
+          "required": false
+        },
+        {
+          "name": "ownerId",
+          "type": "string",
+          "info":
+            "HubSpot id of the user that the task is assigned to. See the Owners API to get a list of owner Ids.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        { "name": "success", "info": "Success" },
+        { "name": "error", "info": "Error" }
+      ],
+      "description":
+        "Update a Task. this action will replace any existing allowed fields specified. Any fields not included will not change from existing values.\r\n"
+    },
+    {
+      "name": "deleteCalendarTask",
+      "args": [
+        {
+          "name": "hapikey",
+          "type": "string",
+          "info": "API key if Authorization header isn't present",
+          "required": false
+        },
+        {
+          "name": "taskId",
+          "type": "string",
+          "info": "Unique identifier for the task to delete",
+          "required": true,
+          "concatUrl": true
+        },
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "if hapikey isn't present",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        { "name": "success", "info": "Success" },
+        { "name": "error", "info": "Error" }
+      ],
+      "description":
+        "Deletes Task from system. If there is a content object (Blog post, email, landing page) associated, they will not be affected."
+    },
+    {
+      "name": "createACompany",
+      "args": [
+        {
+          "name": "hapikey",
+          "type": "string",
+          "info": "API key if Authorization header isn't present",
+          "required": false
+        },
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "if hapikey isn't present",
+          "required": false
+        },
+        {
+          "name": "companyJSON",
+          "type": "string",
+          "info":
+            "This is JSON that represents a company that you're creating. This should be in the format of the code sample below.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        { "name": "success", "info": "Success" },
+        { "name": "error", "info": "Error" }
+      ],
+      "description":
+        "For a given portal, create a company. This is particularly useful if you're integrating with a CRM or another application that has a similar notion of a company."
+    },
+    {
+      "name": "updateACompany",
+      "args": [
+        {
+          "name": "hapikey",
+          "type": "string",
+          "info": "API key if Authorization header isn't present",
+          "required": false
+        },
+        {
+          "name": "companyId",
+          "type": "string",
+          "info": "Unique identifier for a particular company.",
+          "required": true,
+          "concatUrl": true
+        },
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "if hapikey isn't present",
+          "required": false
+        },
+        {
+          "name": "companyJSON",
+          "type": "string",
+          "info":
+            "This is JSON that represents a company that you're creating. This should be in the format of the code sample below.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        { "name": "success", "info": "Success" },
+        { "name": "error", "info": "Error" }
+      ],
+      "description":
+        "Updates the existing company with the id :companyId with the properties as specified by JSON in the request body\r\n\r\nReturns JSON representing the updated company."
+    },
+    {
+      "name": "updateAGroupOfCompanies",
+      "args": [
+        {
+          "name": "hapikey",
+          "type": "string",
+          "info": "API key if Authorization header isn't present",
+          "required": false
+        },
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "if hapikey isn't present",
+          "required": false
+        },
+        {
+          "name": "objectId",
+          "type": "string",
+          "info": "The companyId of the company that you want to update.",
+          "required": true
+        },
+        {
+          "name": "properties",
+          "type": "string",
+          "info":
+            "A list of properties that you want to update. Each property must include the name of the property to be updated, and the value of the property to update to..",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        { "name": "success", "info": "Success" },
+        { "name": "error", "info": "Error" }
+      ],
+      "description":
+        "Update a group of existing company records by their companyId.\r\nThis endpoint takes a list of objectIds and that correspond to the companyId of the company you want to update, and a list of properties to update for that company."
+    },
+    {
+      "name": "deleteACompany",
+      "args": [
+        {
+          "name": "companyId",
+          "type": "string",
+          "info": "Unique identifier for a particular company.",
+          "required": true,
+          "concatUrl": true
+        },
+        {
+          "name": "hapikey",
+          "type": "string",
+          "info": "API key if Authorization header isn't present",
+          "required": false
+        },
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "if hapikey isn't present",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        { "name": "success", "info": "Success" },
+        { "name": "error", "info": "Error" }
+      ],
+      "description":
+        "Deletes the exisiting company specified by :companyId. Returns JSON indicating whether or not the specified company was actually deleted.\r\n\r\nSince companies play a central role in the CRM, it is a best practice not to delete a company unless your application has created them."
+    },
+    {
+      "name": "getAllCompanies",
+      "args": [
+        {
+          "name": "hapikey",
+          "type": "string",
+          "info": "API key if Authorization header isn't present",
+          "required": false
+        },
+        {
+          "name": "Limit",
+          "type": "string",
+          "info":
+            "The number of records to return. Defaults to 100, has a maximum value of 250.",
+          "required": false
+        },
+        {
+          "name": "Offset",
+          "type": "string",
+          "info":
+            "Used to page through the results. If there are more records in your portal than the limit= parameter, you will need to use the offset returned in the first request to get the next set of results.",
+          "required": false
+        },
+        {
+          "name": "Properties",
+          "type": "string",
+          "info":
+            "Used to include specific company properties in the results.  By default, the results will only include the company ID, and will not include the values for any properties for your companies.  Including this parameter will include the data for the specified property in the results.  You can include this parameter multiple times to request multiple properties. Note:to pass multiple Properties pass  a comma separated list of arguments.",
+          "required": false,
+          "multiple": "true"
+        },
+        {
+          "name": "PropertiesWithHistory",
+          "type": "string",
+          "info":
+            "Works similarly to properties=, but this parameter will include the history for the specified property, instead of just including the current value. Use this parameter when you need the full history of changes to a property's value.",
+          "required": false,
+          "multiple": true
+        },
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "if hapikey isn't present",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        { "name": "success", "info": "Success" },
+        { "name": "error", "info": "Error" }
+      ],
+      "description":
+        "Used to get all of the companies in a portal. Returns a paginated list of companies.\r\n\r\nIn addition to the list of companies, each request will also return two values, offset and has-more. If has-more is true, you'll need to make another request, using the offset to get the next page of company records."
+    },
+    {
+      "name": "getRecentlyModifiedCompanies",
+      "args": [
+        {
+          "name": "hapikey",
+          "type": "string",
+          "info": "API key if Authorization header isn't present",
+          "required": false
+        },
+        {
+          "name": "offset",
+          "type": "string",
+          "info":
+            "This is used to get the next page of results. Each request will return an offset in the response, and you'd use that offset in the URL of your next request to get the next page of results.",
+          "required": false
+        },
+        {
+          "name": "Count",
+          "type": "string",
+          "info": "Specifies the number of companies to be returned.",
+          "required": false
+        },
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "if hapikey isn't present",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        { "name": "success", "info": "Success" },
+        { "name": "error", "info": "Error" }
+      ],
+      "description":
+        "Returns a list of all companies sorted by the date the companies were most recently modified. This is particularly useful for ongoing syncs with HubSpot in which changes to companies must be captured in another system."
+    },
+    {
+      "name": "getRecentlyCreatedCompanies",
+      "args": [
+        {
+          "name": "hapikey",
+          "type": "string",
+          "info": "API key if Authorization header isn't present",
+          "required": false
+        },
+        {
+          "name": "offset",
+          "type": "string",
+          "info":
+            "This is used to get the next page of results. Each request will return an offset in the response, and you'd use that offset in the URL of your next request to get the next page of results.",
+          "required": false
+        },
+        {
+          "name": "Count",
+          "type": "string",
+          "info": "Specifies the number of companies to be returned.",
+          "required": false
+        },
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "if hapikey isn't present",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        { "name": "success", "info": "Success" },
+        { "name": "error", "info": "Error" }
+      ],
+      "description":
+        "Returns a list of all companies sorted by the date the companies were created. This is particularly useful for ongoing syncs with HubSpot in which changes to companies must be captured in another system."
+    },
+    {
+      "name": "getACompany",
+      "args": [
+        {
+          "name": "companyId",
+          "type": "string",
+          "info": "Unique identifier for a particular company.",
+          "required": true,
+          "concatUrl": true
+        },
+        {
+          "name": "hapikey",
+          "type": "string",
+          "info": "API key if Authorization header isn't present",
+          "required": false
+        },
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "if hapikey isn't present",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        { "name": "success", "info": "Success" },
+        { "name": "error", "info": "Error" }
+      ],
+      "description":
+        "Returns an object representing the company with the id :companyId associated with the specified portal. Particularly useful if you're performing lookups on specific attributes of a company."
+    },
+    {
+      "name": "getContactsAtACompany",
+      "args": [
+        {
+          "name": "companyId",
+          "type": "string",
+          "info": "Unique identifier for a particular company.",
+          "required": true,
+          "concatUrl": true
+        },
+        {
+          "name": "hapikey",
+          "type": "string",
+          "info": "API key if Authorization header isn't present",
+          "required": false
+        },
+        {
+          "name": "Count",
+          "type": "string",
+          "info": "Specifies the number of contacts to be returned.",
+          "required": false
+        },
+        {
+          "name": "VidOffset",
+          "type": "string",
+          "info": "The vid to offset the query by.",
+          "required": false
+        },
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "if hapikey isn't present",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        { "name": "success", "info": "Success" },
+        { "name": "error", "info": "Error" }
+      ],
+      "description":
+        "Returns all of the contacts who have an associatedcompanyid contact property of :companyid. For more on how contacts are associated with companies, check out our Companies API Overview.\r\n\r\nThis will return 20 contacts by default. You can get up to 100 contacts per request using the count= parameter. You can use the \"vidoffset\": field returned in the results with the vidOffset= parameter to get the next set of results."
+    },
+    {
+      "name": "getContactIDsAtACompany",
+      "args": [
+        {
+          "name": "companyId",
+          "type": "string",
+          "info": "Unique identifier for a particular company.",
+          "required": true,
+          "concatUrl": true
+        },
+        {
+          "name": "hapikey",
+          "type": "string",
+          "info": "API key if Authorization header isn't present",
+          "required": false
+        },
+        {
+          "name": "Count",
+          "type": "string",
+          "info": "Specifies the number of contacts to be returned.",
+          "required": false
+        },
+        {
+          "name": "VidOffset",
+          "type": "string",
+          "info": "The vid to offset the query by.",
+          "required": false
+        },
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "if hapikey isn't present",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        { "name": "success", "info": "Success" },
+        { "name": "error", "info": "Error" }
+      ],
+      "description":
+        "Returns all of the contact IDs who have an associatedcompanyid property of :companyid. Useful if you're not looking for any more information on contacts at a company other than that they exist and where to find more information on them.\r\n\r\nThis will return 100 contacts by default, which is the maximum number of records you can get in a single request. You can get fewer contacts per request using the count= parameter. You can use the \"vidoffset\": field returned in the results with the vidOffset= parameter to get the next set of results."
+    },
+    {
+      "name": "addContactToCompany",
+      "args": [
+        {
+          "name": "contactVID",
+          "type": "string",
+          "info": "The ID of a contact to add a company.",
+          "required": true,
+          "concatUrl": true
+        },
+        {
+          "name": "companyID",
+          "type": "string",
+          "info": "The ID of a company to add a contact to.",
+          "required": true,
+          "concatUrl": true
+        },
+        {
+          "name": "hapikey",
+          "type": "string",
+          "info": "API key if Authorization header isn't present",
+          "required": false
+        },
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "if hapikey isn't present",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        { "name": "success", "info": "Success" },
+        { "name": "error", "info": "Error" }
+      ],
+      "description":
+        "Associate a given contact to a company. If a contact is already associated to a different company, the contact will be moved to the new company. A contact can only be associated to one company.\r\n\r\n"
+    },
+    {
+      "name": "removeContactFromCompany",
+      "args": [
+        {
+          "name": "contactVID",
+          "type": "string",
+          "info": "The ID of a contact to add a company.",
+          "required": true,
+          "concatUrl": true
+        },
+        {
+          "name": "companyID",
+          "type": "string",
+          "info": "The ID of a company to add a contact to.",
+          "required": true,
+          "concatUrl": true
+        },
+        {
+          "name": "hapikey",
+          "type": "string",
+          "info": "API key if Authorization header isn't present",
+          "required": false
+        },
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "if hapikey isn't present",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        { "name": "success", "info": "Success" },
+        { "name": "error", "info": "Error" }
+      ],
+      "description":
+        "Remove a contact from a company. Once complete the contact will not be associated to any company."
+    }
+  ]
+}

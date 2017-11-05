@@ -1,5 +1,4 @@
 {
-    "defultVersion": "40.0",
-    "baseUrl": "salesforce.com/services/data",
-    "grant_type" : "password"
+    "PACKAGE_NAME" : "Hubspot",
+    "baseUrl" : "https://api.hubapi.com/calendar/v1"
 }

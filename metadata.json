@@ -244,9 +244,11 @@
         {
           "name": "campaignGuid",
           "type": "string",
-          "info": "Show tasks by campaign guid. Multiple can be specified.",
-          "includeNoCampaigns":
-            "Show tasks without a campaign specified (true, false). Defaults to false.",
+          "info": "Show tasks by campaign guid. Multiple can be specified."
+          },
+          {
+          "name" : "includeNoCampaigns",
+          "info" : "Show tasks without a campaign specified (true, false). Defaults to false.",
           "required": false
         },
         {

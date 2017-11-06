@@ -1,0 +1,19 @@
+{
+    "name": "HubSpot",
+    "version": "0.0.1",
+    "engines": {
+      "node": "5.10.1",
+      "npm": "8.4.0"
+    },
+    "description": "RapidAPI HubSpot module",
+    "main": "index.js",
+    "scripts": {},
+    "author": "Noam Salinger",
+    "license": "ISC",
+    "dependencies": {
+      "body-parser": "^1.18.2",
+      "express": "^4.16.2",
+      "request": "^2.83.0"
+    }
+  }
+  

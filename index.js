@@ -13,7 +13,8 @@ const templates = {
     "GET" :  require('./Templates/GETTemplate'),
     "POST" : require('./Templates/POSTTemplate'),
     "DELETE" : require('./Templates/DELETETemplate'),
-    "PATCH" : require('./Templates/PATCHTemplate')
+    "PATCH" : require('./Templates/PATCHTemplate'),
+    "PUT" : require("./Templates/PUTTemplate")
 };
 
 

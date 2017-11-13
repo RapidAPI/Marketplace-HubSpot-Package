@@ -8,7 +8,7 @@
   "keywords": ["SaaS", "support", "cloud","API"],
   "accounts": {
     "domain": "https://www.hubspot.com/",
-    "credentials": []
+    "Credentials": []
   },
   "blocks": [
     {
@@ -16,45 +16,45 @@
       "args": [
         {
           "name": "startDate",
-          "type": "string",
+          "type": "String",
           "info":
             "The beginning value of the query range, in UTC, in milliseconds",
           "required": true
         },
         {
           "name": "endDate",
-          "type": "string",
+          "type": "String",
           "info": "The end value of the query range, in UTC, in milliseconds",
           "required": true
         },
         {
           "name": "hapikey",
-          "type": "string",
+          "type": "String",
           "info": "API key if Authorization header isn't present",
           "required": false
         },
         {
           "name": "limit",
-          "type": "string",
+          "type": "String",
           "info": "The maximum number of items to return. Defaults to 100.",
           "required": false
         },
         {
           "name": "offset",
-          "type": "string",
+          "type": "String",
           "info": "Starting value to page by. Defaults to 0.",
           "required": false
         },
         {
           "name": "contentCategory",
-          "type": "string",
+          "type": "String",
           "info":
             "The category of content to filter by, values include \"blog-post\", \"email\"",
           "required": false
         },
         {
           "name": "campaignGuid",
-          "type": "string",
+          "type": "String",
           "info": "Show tasks by campaign guid. Multiple can be specified.",
           "includeNoCampaigns":
             "Show tasks without a campaign specified (true, false). Defaults to false.",
@@ -62,7 +62,7 @@
         },
         {
           "name": "accessToken",
-          "type": "credentials",
+          "type": "Credentials",
           "info": "if hapikey isn't present",
           "required": false
         }
@@ -79,45 +79,45 @@
       "args": [
         {
           "name": "startDate",
-          "type": "string",
+          "type": "String",
           "info":
             "The beginning value of the query range, in UTC, in milliseconds",
           "required": true
         },
         {
           "name": "endDate",
-          "type": "string",
+          "type": "String",
           "info": "The end value of the query range, in UTC, in milliseconds",
           "required": true
         },
         {
           "name": "hapikey",
-          "type": "string",
+          "type": "String",
           "info": "API key if Authorization header isn't present",
           "required": false
         },
         {
           "name": "limit",
-          "type": "string",
+          "type": "String",
           "info": "The maximum number of items to return. Defaults to 100.",
           "required": false
         },
         {
           "name": "offset",
-          "type": "string",
+          "type": "String",
           "info": "Starting value to page by. Defaults to 0.",
           "required": false
         },
         {
           "name": "contentCategory",
-          "type": "string",
+          "type": "String",
           "info":
             "The category of content to filter by, values include \"blog-post\", \"email\"",
           "required": false
         },
         {
           "name": "campaignGuid",
-          "type": "string",
+          "type": "String",
           "info": "Show tasks by campaign guid. Multiple can be specified.",
           "includeNoCampaigns":
             "Show tasks without a campaign specified (true, false). Defaults to false.",
@@ -125,7 +125,7 @@
         },
         {
           "name": "accessToken",
-          "type": "credentials",
+          "type": "Credentials",
           "info": "if hapikey isn't present",
           "required": false
         }
@@ -142,45 +142,45 @@
       "args": [
         {
           "name": "startDate",
-          "type": "string",
+          "type": "String",
           "info":
             "The beginning value of the query range, in UTC, in milliseconds",
           "required": true
         },
         {
           "name": "endDate",
-          "type": "string",
+          "type": "String",
           "info": "The end value of the query range, in UTC, in milliseconds",
           "required": true
         },
         {
           "name": "hapikey",
-          "type": "string",
+          "type": "String",
           "info": "API key if Authorization header isn't present",
           "required": false
         },
         {
           "name": "limit",
-          "type": "string",
+          "type": "String",
           "info": "The maximum number of items to return. Defaults to 100.",
           "required": false
         },
         {
           "name": "offset",
-          "type": "string",
+          "type": "String",
           "info": "Starting value to page by. Defaults to 0.",
           "required": false
         },
         {
           "name": "contentCategory",
-          "type": "string",
+          "type": "String",
           "info":
             "The category of content to filter by, values include \"blog-post\", \"email\"",
           "required": false
         },
         {
           "name": "campaignGuid",
-          "type": "string",
+          "type": "String",
           "info": "Show tasks by campaign guid. Multiple can be specified.",
           "includeNoCampaigns":
             "Show tasks without a campaign specified (true, false). Defaults to false.",
@@ -188,7 +188,7 @@
         },
         {
           "name": "accessToken",
-          "type": "credentials",
+          "type": "Credentials",
           "info": "if hapikey isn't present",
           "required": false
         }
@@ -205,45 +205,45 @@
       "args": [
         {
           "name": "startDate",
-          "type": "string",
+          "type": "String",
           "info":
             "The beginning value of the query range, in UTC, in milliseconds",
           "required": true
         },
         {
           "name": "endDate",
-          "type": "string",
+          "type": "String",
           "info": "The end value of the query range, in UTC, in milliseconds",
           "required": true
         },
         {
           "name": "hapikey",
-          "type": "string",
+          "type": "String",
           "info": "API key if Authorization header isn't present",
           "required": false
         },
         {
           "name": "limit",
-          "type": "string",
+          "type": "String",
           "info": "The maximum number of items to return. Defaults to 100.",
           "required": false
         },
         {
           "name": "offset",
-          "type": "string",
+          "type": "String",
           "info": "Starting value to page by. Defaults to 0.",
           "required": false
         },
         {
           "name": "contentCategory",
-          "type": "string",
+          "type": "String",
           "info":
             "The category of content to filter by, values include \"blog-post\", \"email\"",
           "required": false
         },
         {
           "name": "campaignGuid",
-          "type": "string",
+          "type": "String",
           "info": "Show tasks by campaign guid. Multiple can be specified."
           },
           {
@@ -253,7 +253,7 @@
         },
         {
           "name": "accessToken",
-          "type": "credentials",
+          "type": "Credentials",
           "info": "if hapikey isn't present",
           "required": false
         }
@@ -271,12 +271,12 @@
         {
           "name": "hapikey",
           "info": "API key if Authorization header is not present",
-          "type": "credentials",
+          "type": "Credentials",
           "required": false
         },
         {
           "name": "accessToken",
-          "type": "credentials",
+          "type": "Credentials",
           "info": "if hapikey isn't present",
           "required": false
         },
@@ -284,72 +284,72 @@
           "name": "eventDate",
           "info":
             "When the task is set to be due, in milliseconds since the epoch",
-          "type": "string",
+          "type": "String",
           "required": true
         },
         {
           "name": "eventType",
           "info":
             "Type of calendar event; for tasks this is always PUBLISHING_TASK",
-          "type": "string",
+          "type": "String",
           "required": true
         },
         {
           "name": "category",
           "info": "type of task; one of BLOG_POST, EMAIL, LANDING_PAGE, CUSTOM",
-          "type": "string",
+          "type": "String",
           "required": false
         },
         {
           "name": "state",
           "info": "value of TODO or DONE",
-          "type": "string",
+          "type": "String",
           "required": false
         },
         {
           "name": "campaignGuid",
           "info": "value of campaign GUID associated with Task",
-          "type": "string",
+          "type": "String",
           "required": false
         },
         {
           "name": "name",
           "info": "Name of Task",
-          "type": "string",
+          "type": "String",
           "required": false
         },
         {
           "name": "description",
           "info": "description of Task",
-          "type": "string",
+          "type": "String",
           "required": false
         },
         {
           "name": "ownerId",
           "info":
             "HubSpot id of the user that the task is assigned to. See the Owners API to get a list of owner Ids",
-          "type": "string",
+          "type": "String",
           "required": false
         },
         {
           "name": "topicIds",
           "info":
             "Array: The list of ids of topics associated with the associated Blog Post, if any. Otherwise null. Only read for BLOG_POST Tasks. See Topics API to get a list of topic ids.",
-          "type": "string",
+          "type": "String",
           "required": false
         },
         {
           "name": "contentGroupId",
           "info":
             "The ID of the content group (aka blog) that the associated Blog Post will belong to, if any. Only read for BLOG_POST Tasks. See Blog API to get a list of blogs ids.",
-          "type": "string",
+          "type": "String",
           "required": false
         },
         {
           "name": "templatePath",
           "info":
             "(optional) The template to use for emails and landing pages. only read for EMAIL and LANDING_PAGE categories.",
-          "type": "string",
+          "type": "String",
           "required": false
         }
       ],
@@ -365,20 +365,20 @@
       "args": [
         {
           "name": "taskId",
-          "type": "string",
+          "type": "String",
           "info": "The ID of the required task",
           "required": true,
           "concatUrl": true
         },
         {
           "name": "hapikey",
-          "type": "string",
+          "type": "String",
           "info": "API key if Authorization header isn't present",
           "required": false
         },
         {
           "name": "accessToken",
-          "type": "credentials",
+          "type": "Credentials",
           "info": "if hapikey isn't present",
           "required": false
         }
@@ -395,85 +395,85 @@
       "args": [
         {
           "name": "hapikey",
-          "type": "string",
+          "type": "String",
           "info": "API key if Authorization header isn't present",
           "required": false
         },
         {
           "name": "taskId",
-          "type": "string",
+          "type": "String",
           "info": "Unique identifier for the task to delete",
           "required": true,
           "concatUrl": true
         },
         {
           "name": "accessToken",
-          "type": "credentials",
+          "type": "Credentials",
           "info": "if hapikey isn't present",
           "required": false
         },
         {
           "name": "eventDate",
-          "type": "string",
+          "type": "String",
           "info":
             "When the task is set to be due, in milliseconds since the epoch",
           "required": false
         },
         {
           "name": "eventType",
-          "type": "string",
+          "type": "String",
           "info":
             "Type of calendar event; for tasks this is always PUBLISHING_TASK",
           "required": false
         },
         {
           "name": "category",
-          "type": "string",
+          "type": "String",
           "info":
             "type of task; one of BLOG_POST, EMAIL, LANDING_PAGE, CUSTOM. This must match existing value.",
           "required": false
         },
         {
           "name": "state",
-          "type": "string",
+          "type": "String",
           "info": "value of TODO or DONE",
           "required": false
         },
         {
           "name": "category",
-          "type": "string",
+          "type": "String",
           "info":
             "type of task; one of BLOG_POST, EMAIL, LANDING_PAGE, CUSTOM. This must match existing value.",
           "required": false
         },
         {
           "name": "campaignGuid",
-          "type": "string",
+          "type": "String",
           "info": "value of campaign GUID associated with Task",
           "required": false
         },
         {
           "name": "topicIds",
-          "type": "string",
+          "type": "String",
           "info":
             "The list of ids of topics associated with the associated Blog Post, if any. Otherwise null. Only read for BLOG_POST Tasks. See Topics API to get a list of topic ids.",
           "required": false
         },
         {
           "name": "name",
-          "type": "string",
+          "type": "String",
           "info": "Name of Task",
           "required": false
         },
         {
           "name": "description",
-          "type": "string",
+          "type": "String",
           "info": "description of Task.",
           "required": false
         },
         {
           "name": "ownerId",
-          "type": "string",
+          "type": "String",
           "info":
             "HubSpot id of the user that the task is assigned to. See the Owners API to get a list of owner Ids.",
           "required": false
@@ -491,20 +491,20 @@
       "args": [
         {
           "name": "hapikey",
-          "type": "string",
+          "type": "String",
           "info": "API key if Authorization header isn't present",
           "required": false
         },
         {
           "name": "taskId",
-          "type": "string",
+          "type": "String",
           "info": "Unique identifier for the task to delete",
           "required": true,
           "concatUrl": true
         },
         {
           "name": "accessToken",
-          "type": "credentials",
+          "type": "Credentials",
           "info": "if hapikey isn't present",
           "required": false
         }
@@ -521,19 +521,19 @@
       "args": [
         {
           "name": "hapikey",
-          "type": "string",
+          "type": "String",
           "info": "API key if Authorization header isn't present",
           "required": false
         },
         {
           "name": "accessToken",
-          "type": "credentials",
+          "type": "Credentials",
           "info": "if hapikey isn't present",
           "required": false
         },
         {
           "name": "companyJSON",
-          "type": "string",
+          "type": "String",
           "info":
             "This is JSON that represents a company that you're creating. This should be in the format of the code sample below.",
           "required": true
@@ -551,26 +551,26 @@
       "args": [
         {
           "name": "hapikey",
-          "type": "string",
+          "type": "String",
           "info": "API key if Authorization header isn't present",
           "required": false
         },
         {
           "name": "companyId",
-          "type": "string",
+          "type": "String",
           "info": "Unique identifier for a particular company.",
           "required": true,
           "concatUrl": true
         },
         {
           "name": "accessToken",
-          "type": "credentials",
+          "type": "Credentials",
           "info": "if hapikey isn't present",
           "required": false
         },
         {
           "name": "companyJSON",
-          "type": "string",
+          "type": "String",
           "info":
             "This is JSON that represents a company that you're creating. This should be in the format of the code sample below.",
           "required": true
@@ -588,25 +588,25 @@
       "args": [
         {
           "name": "hapikey",
-          "type": "string",
+          "type": "String",
           "info": "API key if Authorization header isn't present",
           "required": false
         },
         {
           "name": "accessToken",
-          "type": "credentials",
+          "type": "Credentials",
           "info": "if hapikey isn't present",
           "required": false
         },
         {
           "name": "objectId",
-          "type": "string",
+          "type": "String",
           "info": "The companyId of the company that you want to update.",
           "required": true
         },
         {
           "name": "properties",
-          "type": "string",
+          "type": "String",
           "info":
             "A list of properties that you want to update. Each property must include the name of the property to be updated, and the value of the property to update to..",
           "required": true
@@ -624,20 +624,20 @@
       "args": [
         {
           "name": "companyId",
-          "type": "string",
+          "type": "String",
           "info": "Unique identifier for a particular company.",
           "required": true,
           "concatUrl": true
         },
         {
           "name": "hapikey",
-          "type": "string",
+          "type": "String",
           "info": "API key if Authorization header isn't present",
           "required": false
         },
         {
           "name": "accessToken",
-          "type": "credentials",
+          "type": "Credentials",
           "info": "if hapikey isn't present",
           "required": false
         }
@@ -654,27 +654,27 @@
       "args": [
         {
           "name": "hapikey",
-          "type": "string",
+          "type": "String",
           "info": "API key if Authorization header isn't present",
           "required": false
         },
         {
           "name": "Limit",
-          "type": "string",
+          "type": "String",
           "info":
             "The number of records to return. Defaults to 100, has a maximum value of 250.",
           "required": false
         },
         {
           "name": "Offset",
-          "type": "string",
+          "type": "String",
           "info":
             "Used to page through the results. If there are more records in your portal than the limit= parameter, you will need to use the offset returned in the first request to get the next set of results.",
           "required": false
         },
         {
           "name": "Properties",
-          "type": "string",
+          "type": "String",
           "info":
             "Used to include specific company properties in the results.  By default, the results will only include the company ID, and will not include the values for any properties for your companies.  Including this parameter will include the data for the specified property in the results.  You can include this parameter multiple times to request multiple properties. Note:to pass multiple Properties pass  a comma separated list of arguments.",
           "required": false,
@@ -682,7 +682,7 @@
         },
         {
           "name": "PropertiesWithHistory",
-          "type": "string",
+          "type": "String",
           "info":
             "Works similarly to properties=, but this parameter will include the history for the specified property, instead of just including the current value. Use this parameter when you need the full history of changes to a property's value.",
           "required": false,
@@ -690,7 +690,7 @@
         },
         {
           "name": "accessToken",
-          "type": "credentials",
+          "type": "Credentials",
           "info": "if hapikey isn't present",
           "required": false
         }
@@ -707,26 +707,26 @@
       "args": [
         {
           "name": "hapikey",
-          "type": "string",
+          "type": "String",
           "info": "API key if Authorization header isn't present",
           "required": false
         },
         {
           "name": "offset",
-          "type": "string",
+          "type": "String",
           "info":
             "This is used to get the next page of results. Each request will return an offset in the response, and you'd use that offset in the URL of your next request to get the next page of results.",
           "required": false
         },
         {
           "name": "Count",
-          "type": "string",
+          "type": "String",
           "info": "Specifies the number of companies to be returned.",
           "required": false
         },
         {
           "name": "accessToken",
-          "type": "credentials",
+          "type": "Credentials",
           "info": "if hapikey isn't present",
           "required": false
         }
@@ -743,26 +743,26 @@
       "args": [
         {
           "name": "hapikey",
-          "type": "string",
+          "type": "String",
           "info": "API key if Authorization header isn't present",
           "required": false
         },
         {
           "name": "offset",
-          "type": "string",
+          "type": "String",
           "info":
             "This is used to get the next page of results. Each request will return an offset in the response, and you'd use that offset in the URL of your next request to get the next page of results.",
           "required": false
         },
         {
           "name": "Count",
-          "type": "string",
+          "type": "String",
           "info": "Specifies the number of companies to be returned.",
           "required": false
         },
         {
           "name": "accessToken",
-          "type": "credentials",
+          "type": "Credentials",
           "info": "if hapikey isn't present",
           "required": false
         }
@@ -779,20 +779,20 @@
       "args": [
         {
           "name": "companyId",
-          "type": "string",
+          "type": "String",
           "info": "Unique identifier for a particular company.",
           "required": true,
           "concatUrl": true
         },
         {
           "name": "hapikey",
-          "type": "string",
+          "type": "String",
           "info": "API key if Authorization header isn't present",
           "required": false
         },
         {
           "name": "accessToken",
-          "type": "credentials",
+          "type": "Credentials",
           "info": "if hapikey isn't present",
           "required": false
         }
@@ -809,32 +809,32 @@
       "args": [
         {
           "name": "companyId",
-          "type": "string",
+          "type": "String",
           "info": "Unique identifier for a particular company.",
           "required": true,
           "concatUrl": true
         },
         {
           "name": "hapikey",
-          "type": "string",
+          "type": "String",
           "info": "API key if Authorization header isn't present",
           "required": false
         },
         {
           "name": "Count",
-          "type": "string",
+          "type": "String",
           "info": "Specifies the number of contacts to be returned.",
           "required": false
         },
         {
           "name": "VidOffset",
-          "type": "string",
+          "type": "String",
           "info": "The vid to offset the query by.",
           "required": false
         },
         {
           "name": "accessToken",
-          "type": "credentials",
+          "type": "Credentials",
           "info": "if hapikey isn't present",
           "required": false
         }
@@ -851,32 +851,32 @@
       "args": [
         {
           "name": "companyId",
-          "type": "string",
+          "type": "String",
           "info": "Unique identifier for a particular company.",
           "required": true,
           "concatUrl": true
         },
         {
           "name": "hapikey",
-          "type": "string",
+          "type": "String",
           "info": "API key if Authorization header isn't present",
           "required": false
         },
         {
           "name": "Count",
-          "type": "string",
+          "type": "String",
           "info": "Specifies the number of contacts to be returned.",
           "required": false
         },
         {
           "name": "VidOffset",
-          "type": "string",
+          "type": "String",
           "info": "The vid to offset the query by.",
           "required": false
         },
         {
           "name": "accessToken",
-          "type": "credentials",
+          "type": "Credentials",
           "info": "if hapikey isn't present",
           "required": false
         }
@@ -893,27 +893,27 @@
       "args": [
         {
           "name": "contactVID",
-          "type": "string",
+          "type": "String",
           "info": "The ID of a contact to add a company.",
           "required": true,
           "concatUrl": true
         },
         {
           "name": "companyID",
-          "type": "string",
+          "type": "String",
           "info": "The ID of a company to add a contact to.",
           "required": true,
           "concatUrl": true
         },
         {
           "name": "hapikey",
-          "type": "string",
+          "type": "String",
           "info": "API key if Authorization header isn't present",
           "required": false
         },
         {
           "name": "accessToken",
-          "type": "credentials",
+          "type": "Credentials",
           "info": "if hapikey isn't present",
           "required": false
         }
@@ -930,27 +930,27 @@
       "args": [
         {
           "name": "contactVID",
-          "type": "string",
+          "type": "String",
           "info": "The ID of a contact to add a company.",
           "required": true,
           "concatUrl": true
         },
         {
           "name": "companyID",
-          "type": "string",
+          "type": "String",
           "info": "The ID of a company to add a contact to.",
           "required": true,
           "concatUrl": true
         },
         {
           "name": "hapikey",
-          "type": "string",
+          "type": "String",
           "info": "API key if Authorization header isn't present",
           "required": false
         },
         {
           "name": "accessToken",
-          "type": "credentials",
+          "type": "Credentials",
           "info": "if hapikey isn't present",
           "required": false
         }

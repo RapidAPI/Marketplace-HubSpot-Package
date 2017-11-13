@@ -1,5 +1,6 @@
 const request = require('request');
 const config = require('../config.json');
+const baseUrl = config.baseUrl;
 
 module.exports =(req, res, urlEnding , urlParams , headersObject,postBodyjson) =>{
     

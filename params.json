@@ -413,7 +413,7 @@
         "paramType": "bodyParam"
       }
     ],
-    "method": "PATCH"
+    "method": "PUT"
   },
   "deleteCalendarTask": {
     "name": "deleteCalendarTask",

@@ -244,7 +244,8 @@
         {
           "name": "campaignGuid",
           "type": "String",
-          "info": "Show tasks by campaign guid. Multiple can be specified."
+          "info": "Show tasks by campaign guid. Multiple can be specified.",
+          "required": false
           },
           {
           "name" : "includeNoCampaigns",

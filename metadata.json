@@ -286,14 +286,14 @@
           "info":
             "When the task is set to be due, in milliseconds since the epoch",
           "type": "String",
-          "required": true
+          "required": false
         },
         {
           "name": "eventType",
           "info":
             "Type of calendar event; for tasks this is always PUBLISHING_TASK",
           "type": "String",
-          "required": true
+          "required": false
         },
         {
           "name": "category",

@@ -249,6 +249,7 @@
         },
         {
           "name": "includeNoCampaigns",
+          "type": "String",
           "info":
             "Show tasks without a campaign specified (true, false). Defaults to false.",
           "required": false
